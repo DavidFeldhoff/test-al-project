@@ -19,11 +19,23 @@ codeunit 50112 "TestModifyProcedure_Internal"
         TestModifyProcedure_Public.PublicProcedureOneParam(Customer, MyBool);
         TestModifyProcedure_Public.PublicProcedureOneParam(Customer, MyBool, Vendor);
         Customer.CalcAvailableCredit(MyBool);
+        ReturnSomething(MyBool);
+        ReturnSomethingNamed(MyBool);
     end;
 
     local procedure LocalProcedureOneParam(Customer: Record Customer)
     begin
         Error('Procedure ProcedureOneParam not implemented.');
+    end;
+
+    local procedure ReturnSomethingNamed() returnedInt: Integer
+    begin
+
+    end;
+
+    local procedure ReturnSomething(): Integer
+    begin
+
     end;
 
     procedure PublicProcedureOneParam(Customer: Record Customer) //create overload
