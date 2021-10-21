@@ -154,6 +154,11 @@ codeunit 50100 "FirstCodeunit"
         testfuncInSubscriber();
     end;
 
+    local procedure ExtractLabels()
+    begin
+        Message('No Local Var Section end.');
+    end;
+
 
     var
         Customer: Record Customer;

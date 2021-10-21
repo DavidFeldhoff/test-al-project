@@ -16,6 +16,12 @@ codeunit 50107 CodeunitToExtract
         end;
     end;
 
+    var
+        Vendor: Record Vendor;
+
+    protected var
+        Vendor2: Record Vendor;
+
     procedure testProcedureWithOneParameterByValue()
     var
         Customer: Record Customer;
@@ -174,5 +180,13 @@ codeunit 50107 CodeunitToExtract
         with Customer do begin
             Name := 'Microsoft'; //extract this line
         end;
+    end;
+
+    procedure codeWithComments()
+    var
+        Customer: Record Customer;
+    begin
+        //MyComment
+        Customer.Name := 'Name';
     end;
 }
